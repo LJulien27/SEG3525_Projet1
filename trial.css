@@ -1,0 +1,126 @@
+/* body {
+  
+} */
+
+.homepage-background {
+  background-image: url("Website_images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center-bottom;
+}
+
+label[for="numbers"] {
+  display: block;
+  text-align: center;
+}
+
+input#numbers {
+  display: block;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+#result {
+  text-align: center;
+}
+
+.glowing-tabs {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-shadow: 0px 0px 10px blue;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust the height as needed */
+  }
+
+  .center-content .rounded-pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px; /* Adjust the font size as needed */
+    padding: 20px; 
+    width: 300px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    font-family: Marker Felt, fantasy;
+    color: rgb(26, 206, 62);
+    text-shadow: 0 0px 5px rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(212, 147, 68) 50%, red 50%);
+  }
+  
+  .option-button {
+    background: linear-gradient(to right, rgb(212, 147, 68) 50%, red 50%);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 10px rgb(21, 54, 119);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .option-button:hover {
+    background: rgb(0, 255, 174);
+    box-shadow: 0 0 15px rgb(107, 42, 211);
+    transform: scale(1.1);
+  }
+
+  .button-container2 {
+    margin: 0;
+  }
+
+  .totheright {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 150px;
+  }
+
+  .price-and-button {
+    position: absolute; 
+    bottom: 25px; 
+    left: 0; 
+    right: 0;
+  }
+
+  .cart-icon {
+    font-size: 35px;
+    color: rgb(105, 239, 150);
+  }
+
+  .cart-pos {
+    position: absolute;
+    left: 50px;
+  }
+
+  .space {
+    height: 100px;
+  }
+
+  .lilspace {
+    height: 50px;
+  }
+
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }

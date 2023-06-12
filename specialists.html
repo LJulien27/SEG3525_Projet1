@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Second page</title>
+    <link rel="stylesheet" href="trial.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="specialists-background">
+    <div class="bg-danger">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-auto">
+            <a id="cart-icon" onclick="navigateToCart()" class="cart-pos">
+              <i class="bi bi-cart cart-icon"></i>
+            </a>
+            <button
+              class="option-button"
+              onclick="window.location.href = 'homepage.html';"
+            >
+              Home
+            </button>
+            <button
+              class="option-button"
+              onclick="window.location.href = 'ordernow.html';"
+            >
+              Order now
+            </button>
+            <button class="option-button" onclick="navigateToPres()">
+              Prescriptions
+            </button>
+            <button class="option-button">Specialists</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-3">
+      <h2>TrustMed Specialists</h2>
+      <p class="lead text-muted">
+        Speak to or Contact the Specialist of Your Choice
+      </p>
+    </div>
+    <div class="container">
+      <div
+        class="items row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center"
+      >
+        <div class="card m-2" style="width: 18rem">
+          <img
+            src="/Website_images/doctorthird.jpg"
+            class="card-img-top"
+            alt="Specialist 1"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Sarah Adams</h5>
+            <p class="card-text">
+              Dr. Sarah Adams is a clinical pharmacist specializing in
+              medication therapy management and patient counseling.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Phone: 613-555-1234</li>
+            <li class="list-group-item">
+              Email: sarah.adams@trustmedpharmacy.com
+            </li>
+            <li class="list-group-item">
+              Specialization: Medication Therapy Management
+            </li>
+          </ul>
+        </div>
+
+        <div class="card m-2" style="width: 18rem">
+          <img
+            src="/Website_images/doctorfirst.jpg"
+            class="card-img-top"
+            alt="Specialist 2"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Christopher Brown</h5>
+            <p class="card-text">
+              Dr. Christopher Brown is a clinical pharmacist with expertise in
+              geriatric medication management and drug interactions.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Phone: 613-555-5678</li>
+            <li class="list-group-item">
+              Email: christopher.brown@trustmedpharmacy.com
+            </li>
+            <li class="list-group-item">
+              Specialization: Geriatric Medication Management
+            </li>
+          </ul>
+        </div>
+
+        <div class="card m-2" style="width: 18rem">
+          <img
+            src="/Website_images/doctorsecond.jpg"
+            class="card-img-top"
+            alt="Specialist 3"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Dr. Emily Davis</h5>
+            <p class="card-text">
+              Dr. Emily Davis is a clinical pharmacist specializing in
+              cardiovascular health and anticoagulation therapy.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Phone: 613-555-9012</li>
+            <li class="list-group-item">
+              Email: emily.davis@trustmedpharmacy.com
+            </li>
+            <li class="list-group-item">
+              Specialization: Cardiovascular Health
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+    <script src="trial.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order now</title>
+    <link rel="stylesheet" href="trial.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body class="ordernow-background">
+    <div class="bg-danger">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-auto">
+            <a
+              id="cart-icon"
+              onclick="scrollToSection('cart-section')"
+              class="cart-pos"
+            >
+              <i class="bi bi-cart cart-icon"></i>
+            </a>
+            <button
+              class="option-button"
+              onclick="window.location.href = 'homepage.html';"
+            >
+              Home
+            </button>
+            <button class="option-button">Order now</button>
+            <button
+              class="option-button"
+              onclick="scrollToSection('prescriptions-section')"
+            >
+              Prescriptions
+            </button>
+            <button
+              class="option-button"
+              onclick="window.location.href = 'specialists.html';"
+            >
+              Specialists
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-3">
+      <h2>Pricing Plans</h2>
+      <p class="lead text-muted">Choose a pricing plan to suit you.</p>
+      <label for="sort-option">Sort by:</label>
+      <select id="sort-option" class="border-primary">
+        <option value="price-low-to-high">Price: Low to High</option>
+        <option value="price-high-to-low">Price: High to Low</option>
+      </select>
+      <label for="category">Category:</label>
+      <select id="category" class="border-primary">
+        <option selected>All</option>
+        <option value="c&s">Cold and flu</option>
+        <option value="firstaid">First Aid</option>
+        <option value="allergy">Sinus and allergies</option>
+        <option value="vitamin">Vitamins</option>
+        <option value="pain">Pain relief</option>
+        <option value="stom">Digestion and stomach</option>
+      </select>
+    </div>
+
+    <div class="container" id="items-container">
+      <div
+        class="items row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center"
+      >
+        <div
+          id="item1"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <img
+            src="/Website_images/Bandaid2.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Band-aid</h5>
+            <p class="card-text">Pack of 100 Band-Aids</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $19.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item2"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <img
+            src="/Website_images/vaseline.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Vaseline</h5>
+            <p class="card-text">Moisturize them ashy lips</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $9.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item3"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/flintstonegummies.jpg"
+              class="card-img-top img-fluid"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Flintstones</h5>
+            <p class="card-text">Flintstone Gummies pack of 50</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $16.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item4"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <img
+            src="/Website_images/Healikintape.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Heali</h5>
+            <p class="card-text">
+              Heali Kinesiology Tape to help stabalize your body
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $24.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item5"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <img
+            src="/Website_images/advilc&s40.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Advil</h5>
+            <p class="card-text">Advil Cold and Sinus, 40 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $20.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item6"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/VicksC&C.png"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vicks</h5>
+            <p class="card-text">Vicks Cough and Congestion</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $16.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item7"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/VicksCherryColdNyquil.png"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Vicks</h5>
+            <p class="card-text">Vicks Cherry Cold and Flu Nyquil</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $13.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item8"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/TylenolExSt80cpt.png"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tylenol</h5>
+            <p class="card-text">
+              Tylenol Extra Strength Cold and Sinus, 80 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $27.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item9"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Hallscherry.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Halls</h5>
+            <p class="card-text">
+              Halls Triple Soothing Action Cherry Bag, 30 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item10"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Hallshoney.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Halls</h5>
+            <p class="card-text">Halls Honey & Lemon, Bag, 30 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item11"
+          class="card procuct c&s col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/advilc&fnight.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Advil</h5>
+            <p class="card-text">Advil Cough and Flu Nightime, 36 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $23.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item12"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/tylenolextst.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tylenol</h5>
+            <p class="card-text">Extra Strength Pain Relief, 150 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $22.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item13"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/advilliquist.jpg"
+              class="card-img-top"
+              style="height: auto; width: 13rem"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Advil</h5>
+            <p class="card-text">
+              Advil Regular Strength Liqui-Gels Ibuprofen Capsules for Headaches
+              and Pain Relief, 72 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $24.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item14"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Ibuprofenextrast.png"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Meijer</h5>
+            <p class="card-text">
+              Ibuprofen, Pain reliever 200 mg Tablets, 50 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.59
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item15"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/tylenolregst.jpeg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tylenol</h5>
+            <p class="card-text">
+              Tylenol Acetaminophen, Regular Strength, Liquid Gels, 20 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $4.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item16"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/advilregst.jpg"
+              class="card-img-top mt-2"
+              style="width: 12rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Advil</h5>
+            <p class="card-text">
+              Advil Regular Strength Ibuprofen Tablets for Headaches and Pain
+              relief, 250 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $33.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item17"
+          class="card procuct pain col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/advilmusclenjoint.jpg"
+              class="card-img-top"
+              style="height: 9rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Advil</h5>
+            <p class="card-text">
+              Advil Muscle and Joint Extra Strength Caplets for Inflammation and
+              Pain relief Ibuprofen, 72 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $21.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item18"
+          class="card procuct allergy col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/benadrylallergymed36.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Benadryl</h5>
+            <p class="card-text">Benadryl Allergy Medicine, 36 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $16.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item19"
+          class="card procuct allergy col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/aeriusallergy.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aerius</h5>
+            <p class="card-text">
+              Aerius Allergy Medicine, 24-Hour, Non-Drowsy, 20 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $17.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item20"
+          class="card procuct allergy col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/aeriuskidsallergy.jpg"
+              class="card-img-top mt-1"
+              style="height: 11rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Aerius</h5>
+            <p class="card-text">
+              Aerius Kids Allergy Medicine, 24-Hour Non-Drowsy Relief Syrup,
+              100ml
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $10.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item21"
+          class="card procuct allergy col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/reactineexstallergy.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Reactine</h5>
+            <p class="card-text">
+              Reactine Extra Strength Allergy medicine, 30 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $23.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item22"
+          class="card procuct allergy col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Benadrylexstallergynight.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Benadryl</h5>
+            <p class="card-text">
+              Benadryl Extra Strength Allergy Medicine Nighttime, 24 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $17.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item23"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/emergencyfirstaid.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Emergency First Aid</h5>
+            <p class="card-text">
+              Emergency First Aid 180 Piece Essential First Aid Kit
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $15.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item24"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/itchreliefpolysporin.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Polysporin</h5>
+            <p class="card-text">Polysporin Itch relief, 177ml</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $14.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item25"
+          class="card procuct firstaid col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/polysporin.jpg"
+              class="card-img-top"
+              style="width: 14rem; height: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Polysporin</h5>
+            <p class="card-text">
+              Heal-Fast Formula, Original Antibiotic Cream, 30g
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $13.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item26"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/JamiesonD3.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Jamieson</h5>
+            <p class="card-text">Jamieson Vitamin D3 1,000 IU, 240 caplets</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $8.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item27"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/JamiesonA.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Jamieson</h5>
+            <p class="card-text">
+              Jamieson Vitamin A 10,000 IU Softgels, 100 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $9.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item28"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Webbermagnesium.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Webber Naturals</h5>
+            <p class="card-text">
+              Webber Naturals Magnesium, Enhanced Absorption, 60 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item29"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/WebberB12.jpg"
+              class="card-img-top"
+              style="height: 11rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Webber Naturals</h5>
+            <p class="card-text">
+              Webber Naturals® Vitamin B12 Methylcobalamin, 1000 mcg, 80 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $12.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item30"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/vitafusiongummies.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">VitaFusion</h5>
+            <p class="card-text">Vitamin B12 Gummy Vitamins, 140 gummies</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $16.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item31"
+          class="card procuct vitamin col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Jamiesongummieswomen.jpg"
+              class="card-img-top mt-2"
+              style="height: 11rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Jamieson</h5>
+            <p class="card-text">Multivitamin Gummies For Women, 130 gummies</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $20.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item32"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/peptocaplets.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Pepto-Bismol</h5>
+            <p class="card-text">
+              Pepto Bismol Caplets for Stomach and Digestion, 24 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $8.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item33"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/peptoliquid.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Pepto-Bismol</h5>
+            <p class="card-text">
+              Pepto Bismol Liquid for Stomach and Digestion, 480ml
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $15.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item34"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Tumsberries.jpg"
+              class="card-img-top"
+              style="height: 11rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tums</h5>
+            <p class="card-text">
+              Tums Extra Strength Antacid for Heartburn Relief, 100 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item35"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/Tumspepper.jpg"
+              class="card-img-top"
+              style="height: 11rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Tums</h5>
+            <p class="card-text">
+              Tums Ultra Strength 1000mg Antacid for Heartburn Relief, 72
+              caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $5.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item36"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/RestoralaxPowder.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">RestoraLAX</h5>
+            <p class="card-text">RestoraLAX Powder Laxative</p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $12.99
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary add-to-cart-btn"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="item37"
+          class="card procuct stom col m-1"
+          style="width: 17rem; height: 26rem"
+        >
+          <div class="d-flex align-items-center justify-content-center">
+            <img
+              src="/Website_images/exlax.jpg"
+              class="card-img-top"
+              style="height: 12rem; width: auto"
+              alt="..."
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ex-lax</h5>
+            <p class="card-text">
+              ex-lax Gentle Overnight Laxative, 24 caplets
+            </p>
+            <div class="price-and-button">
+              <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                $11.49
+              </h4>
+              <div class="text-center mt-2">
+                <button
+                  class="btn btn-outline-primary"
+                  onclick="addToCart(this)"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <div class="container-lg">
+      <div
+        id="prescriptions-section"
+        class="text-center row justify-content-center"
+      >
+        <h2>Prescriptions</h2>
+        <div class="col-lg-6">
+          <div class="input-group my-3">
+            <input
+              type="text"
+              class="form-control border-primary"
+              placeholder="Enter presctiption ID:"
+              id="inputSearch"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              id="button-addon2"
+              onclick="filterCards()"
+            >
+              Enter
+            </button>
+          </div>
+        </div>
+
+        <div class="container">
+          <div
+            class="items row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center"
+          >
+            <div
+              id="#P3RC0C3T"
+              class="card drug col m-1 hidden"
+              style="width: 17rem; height: 26rem"
+            >
+              <img
+                src="/Website_images/Perc30.jpg"
+                class="card-img-top"
+                style="height: 12rem; width: auto"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Percocets</h5>
+                <p class="card-text">
+                  Oxycodone and Acetaminophen, 100 tablets
+                </p>
+                <div class="price-and-button">
+                  <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                    $0.00
+                  </h4>
+                  <div class="text-center mt-2">
+                    <button
+                      class="btn btn-outline-primary add-to-cart-btn"
+                      onclick="addToCart(this)"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="#4DD3R4LL"
+              class="card drug col m-1 hidden"
+              style="width: 17rem; height: 26rem"
+            >
+              <img
+                src="/Website_images/adderall.png"
+                class="card-img-top mt-1"
+                style="height: 11rem; width: auto"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Adderall</h5>
+                <p class="card-text">
+                  Amphetamine/dextroamphetamine salt mixture (1:1), 100 tablets
+                </p>
+                <div class="price-and-button">
+                  <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                    $0.00
+                  </h4>
+                  <div class="text-center mt-2">
+                    <button
+                      class="btn btn-outline-primary add-to-cart-btn"
+                      onclick="addToCart(this)"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="bl4ckm4rket"
+              class="card drug col m-1 hidden"
+              style="width: 17rem; height: 26rem"
+            >
+              <div class="d-flex align-items-center justify-content-center">
+                <img
+                  src="/Website_images/Coke.avif"
+                  class="card-img-top img-fluid"
+                  style="height: 12rem; width: auto"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cocaine</h5>
+                <p class="card-text">
+                  that good good (don't tell the police we're giving y'all this)
+                </p>
+                <div class="price-and-button">
+                  <h4 class="item-price text-primary fw-bold mb-3 text-center">
+                    $5185.00
+                  </h4>
+                  <div class="text-center mt-2">
+                    <button
+                      class="btn btn-outline-primary add-to-cart-btn"
+                      onclick="addToCart(this)"
+                    >
+                      Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <div id="cart-section" class="container-lg">
+      <div class="text-center row justify-content-center">
+        <h2>Cart</h2>
+        <div class="col-lg-10">
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">First name:</div>
+            <input
+              type="text"
+              class="form-control border-primary"
+              id="first-n"
+            />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">Last name:</div>
+            <input
+              type="text"
+              class="form-control border-primary"
+              id="last-n"
+            />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">Email:</div>
+            <input type="text" class="form-control border-primary" id="email" />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">
+              Phone number:
+            </div>
+            <input type="text" class="form-control border-primary" id="phone" />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">
+              Card Number:
+            </div>
+            <input
+              type="text"
+              class="form-control border-primary"
+              id="cardNumber"
+            />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">
+              Expiry Date:
+            </div>
+            <input
+              type="text"
+              class="form-control border-primary"
+              id="cardDate"
+            />
+          </div>
+
+          <div class="input-group my-3">
+            <div class="input-group-text" style="width: 130px">CVV:</div>
+            <input
+              type="text"
+              placeholder="(number on the back of your credit card)"
+              class="form-control border-primary"
+              id="cardCCV"
+            />
+          </div>
+
+          <h4>Date and Time for Pick-Up</h4>
+          <form>
+            <input
+              class="form-control"
+              type="datetime-local"
+              placeholder="Select Date"
+              id="dateTime"
+            />
+          </form>
+
+          <div class="my-2">
+            <ul id="cart-items"></ul>
+            <div id="cart-total"></div>
+          </div>
+          <button id="checkout-button" class="btn btn-lg btn-primary">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+
+    <script src="trial.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      config = {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        altInput: true,
+        altFormat: "F j, Y (h:S K)",
+      };
+      flatpickr("input[type=datetime-local]", config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
